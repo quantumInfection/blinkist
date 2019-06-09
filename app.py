@@ -1,6 +1,8 @@
 from flask import Flask
+from recommendation import rec_app
 
 app = Flask(__name__)
+app.register_blueprint(rec_app)
 
 
 @app.route('/')
