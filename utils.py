@@ -2,6 +2,7 @@
 
 from functools import wraps
 from flask import request
+import json
 
 
 def verify_args(required_fields=None):
@@ -25,3 +26,11 @@ def verify_args(required_fields=None):
             return func(*args, **kwargs)
         return wrapper
     return decorator
+
+
+def serialize(func):
+    """Decorator to serialize an object."""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        return json.dumps(func(*args, **kwargs))
+    return wrapper
