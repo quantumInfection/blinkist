@@ -13,10 +13,18 @@ books = {
 
 
 def get_book_selection_a(user_id: str):
-    """Returns selection a against a user id"""
+    """
+    Returns selection a against a user id
+    :param user_id: Unique user id of a user
+    :return:
+    """
     return books['a']
 
 
 def get_book_selection_b(user_id: str):
-    """Returns selection b against a user id"""
+    """
+    Returns selection b against a user id
+    :param user_id: Unique user id of a user
+    :return:
+    """
     return books['b']

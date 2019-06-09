@@ -14,7 +14,15 @@ rec_app = Blueprint('rec_app', __name__, url_prefix='/recommendations/v1')
 @verify_args(['user_id'])
 @serialize
 def books_a():
-    """This method will get books from selection A from repo against a user id"""
+    """
+    This method will get books from selection A from repo against a user id
+
+    Request:
+        - user_id: str (Required)
+
+    Response:
+        - book_ids: List[str], list of book ids
+    """
     args = request.args
     return {'book_ids': get_book_selection_a(user_id=args['user_id'])}
 
@@ -22,6 +30,14 @@ def books_a():
 @rec_app.route('/books-b')
 @serialize
 def books_b():
-    """This method will get books from selection B from repo against a user id"""
+    """
+    This method will get books from selection B from repo against a user id
+
+    Request:
+        - user_id: str (Required)
+
+    Response:
+        - book_ids: List[str], list of book ids
+    """
     args = request.args
     return {'book_ids': get_book_selection_b(user_id=args['user_id'])}
