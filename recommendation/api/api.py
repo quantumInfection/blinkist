@@ -21,7 +21,11 @@ def books_a():
         - user_id: str (Required)
 
     Response:
-        - book_ids: List[str], list of book ids
+        - book_ids: List[selection]
+
+    Where a selection is:
+        - selector: str, a or a+b
+        - book_id: str
     """
     args = request.args
     return {'book_ids': get_book_selection_a(user_id=args['user_id'])}
@@ -37,7 +41,11 @@ def books_b():
         - user_id: str (Required)
 
     Response:
-        - book_ids: List[str], list of book ids
+        - book_ids: List[selection]
+
+    Where a selection is:
+        - selector: str, a or a+b
+        - book_id: str
     """
     args = request.args
     return {'book_ids': get_book_selection_b(user_id=args['user_id'])}

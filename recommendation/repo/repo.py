@@ -18,7 +18,7 @@ def get_book_selection_a(user_id: str):
     :param user_id: Unique user id of a user
     :return:
     """
-    return books['a']
+    return [{'selector': 'a', 'book_id': b} for b in books['a']]
 
 
 def get_book_selection_b(user_id: str):
@@ -27,4 +27,4 @@ def get_book_selection_b(user_id: str):
     :param user_id: Unique user id of a user
     :return:
     """
-    return books['b']
+    return [{'selector': 'b', 'book_id': b} for b in books['b']]
