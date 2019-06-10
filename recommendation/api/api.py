@@ -24,7 +24,7 @@ def books_a():
         - book_ids: List[selection]
 
     Where a selection is:
-        - selector: str, a or a+b
+        - selector: str, a or a+b: To be marked later which one was accurate.
         - book_id: str
     """
     args = request.args
@@ -44,7 +44,7 @@ def books_b():
         - book_ids: List[selection]
 
     Where a selection is:
-        - selector: str, a or a+b
+        - selector: str, a or a+b: To be marked later which one was accurate.
         - book_id: str
     """
     args = request.args
